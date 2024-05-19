@@ -13,257 +13,274 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-/* Center of the Page Image */
-.center-image {
-    margin-top: 100px; /* Adjust this value as needed for space from the navbar */
-    text-align: center;
-}
-
-.center-image img {
-    border-radius: 10px; /* Adding rounded corners */
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* NavBar starts Here*/  
-    nav {
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    right: 0;
-    top: 0;
-    font-family: 'Montserrat', sans-serif;
-    padding: 0 5%;
-    height: 80px;
-    background-color: white;
-    }
-    nav .logo {
-    float: left;
-    width: 40%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    color: #2c7bfe;
-    }
-    nav .links {
-    float: right;
-    padding: 0;
-    margin: 0;
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    }
-    nav .links li {
-    list-style: none;
-    }
-    nav .links a {
-    display: block;
-    padding: 1em;
-    font-size: 16px;
-    font-weight: bold;
-    color: #2c7bfe;
-    text-decoration: none;
-    }
-    #nav-toggle {
-    position: absolute;
-    top: -100px;
-    }
-    nav .links a:hover{
-    color: #000;
-    }
-
-    nav .icon-burger {
-    display: none;
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    }
-    nav .icon-burger .line {
-    width: 30px;
-    height: 5px;
-    background-color: #2c7bfe;
-    margin: 5px;
-    border-radius: 3px;
-    transition: all .3s ease-in-out;
-    }
-
-    @media screen and (max-width: 768px) {
-    nav .logo {
-        font-size: 20px;
-        float: none;
-        width: auto;
-        justify-content: center;
-    }
-    nav .links {
-        float: none;
-        position: fixed;
-        z-index: 9;
-        left: 0;
-        right: 0;
-        top: 60px;
-        bottom: 100%;
-        width: auto;
-        height: auto;
-        flex-direction: column;
-        justify-content: space-evenly;
-        background-color: rgba(0,0,0,.8);
-        overflow: hidden;
-        box-sizing: border-box;
-        transition: all .5s ease-in-out;
-    }
-    nav .links a {
-        font-size: 20px;
-    }
-    nav :checked ~ .links {
-        bottom: 0;
-    }
-    nav .icon-burger {
-        display: block;
-    }
-    nav :checked ~ .icon-burger .line:nth-child(1) {
-        transform: translateY(10px) rotate(225deg);
-    }
-    nav :checked ~ .icon-burger .line:nth-child(3) {
-        transform: translateY(-10px) rotate(-225deg);
-    }
-    nav :checked ~ .icon-burger .line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    }
-
-    @media screen and (max-width: 576px) {
-    nav .logo {
-        font-size: 20px;
-        float: none;
-        width: auto;
-        justify-content: center;
-    }
-    nav .links {
-        float: none;
-        position: fixed;
-        z-index: 9;
-        left: 0;
-        right: 0;
-        top: 50px;
-        bottom: 100%;
-        width: auto;
-        height: auto;
-        flex-direction: column;
-        justify-content: space-evenly;
-        background-color: rgba(0,0,0,.8);
-        overflow: hidden;
-        box-sizing: border-box;
-        transition: all .5s ease-in-out;
-    }
-    nav .links a {
-        font-size: 20px;
-    }
-    nav :checked ~ .links {
-        bottom: 0;
-    }
-    nav .icon-burger {
-        display: block;
-    }
-    nav :checked ~ .icon-burger .line:nth-child(1) {
-        transform: translateY(10px) rotate(225deg);
-    }
-    nav :checked ~ .icon-burger .line:nth-child(3) {
-        transform: translateY(-10px) rotate(-225deg);
-    }
-    nav :checked ~ .icon-burger .line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    }
-    /* NavBar Ends Here*/
-
-        /* Timeline CSS */
-.timeline-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 20px;
-    padding: 20px;
-    background: #ffffff;
-    color: #2c7bfe;
-    border-radius: 8px;
-}
-
-.timeline-card time {
-    margin-bottom: 10px;
-}
-
-.timeline-card:nth-child(even) {
-    background: #f0f0f0;
-}
-
-            </style>
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #2c7bfe;
+            color: #fff;
+            overflow-x: hidden;
+            padding-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .center-image {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .center-image img {
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 60%;
+            height: auto;
+        }
+        .description {
+            max-width: 80%;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        nav {
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            right: 0;
+            top: 0;
+            padding: 0 5%;
+            height: 80px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-size: 24px;
+            color: #2c7bfe;
+            font-weight: bold;
+        }
+        nav .links {
+            display: flex;
+            list-style: none;
+        }
+        nav .links li {
+            margin-right: 20px;
+        }
+        nav .links a {
+            display: block;
+            padding: 1em;
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c7bfe;
+            text-decoration: none;
+        }
+        nav .links a:hover {
+            color: #000;
+        }
+        #nav-toggle {
+            display: none;
+        }
+        nav .icon-burger {
+            display: none;
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        nav .icon-burger .line {
+            width: 30px;
+            height: 5px;
+            background-color: #2c7bfe;
+            margin: 5px;
+            border-radius: 3px;
+            transition: all .3s ease-in-out;
+        }
+        @media screen and (max-width: 768px) {
+            nav .logo {
+                font-size: 20px;
+            }
+            nav .links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+            nav .links a {
+                font-size: 20px;
+            }
+            nav .icon-burger {
+                display: block;
+            }
+            #nav-toggle:checked + .links {
+                display: flex;
+            }
+            #nav-toggle:checked + .icon-burger .line:nth-child(1) {
+                transform: translateY(10px) rotate(225deg);
+            }
+            #nav-toggle:checked + .icon-burger .line:nth-child(3) {
+                transform: translateY(-10px) rotate(-225deg);
+            }
+            #nav-toggle:checked + .icon-burger .line:nth-child(2) {
+                opacity: 0;
+            }
+        }
+        .welcome-message {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        .content {
+            max-width: 80%;
+            margin: 20px 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .timeline-card {
+            width: 20%;
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff;
+            color: #2c7bfe;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .timeline-card time {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .timeline-card:nth-child(even) {
+            background: #f0f0f0;
+        }
+        .google-form, .youtube-video {
+            max-width: 80%;
+            margin: 20px 0;
+        }
+        .google-form iframe, .youtube-video iframe {
+            width: 100%;
+            border: 0;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <!-- NavBar Section Starts Here -->
     <nav>
         <input id="nav-toggle" type="checkbox">
-        <div class="logo">NeotricAI <b>DataViz. Community</b></div
-            <ul class="links">
-                <li><a href="https://nithish-yadav-31.github.io/NeotricAI-DataViz-Society/index.html">Home</a></li>
-                <li><a href="https://nithish-yadav-31.github.io/NeotricAI-DataViz-Society/About/index.html">About</a></li>
-                <li><a href="#Events">Events</a></li>
-                <li><a href="https://www.ritrjpm.ac.in/departments/ai-and-ds/ai-ds-about-the-department.php">Department</a></li>
-                <li><a href="https://nithish-yadav-31.github.io/NeotricAI-DataViz-Society/Technologies/index.html">Technologies</a></li>
-                <li><a href="https://nithish-yadav-31.github.io/NeotricAI-DataViz-Society/ContactUs/index.html">ContactUs</a></li>
-            </ul>
-            <label for="nav-toggle" class="icon-burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </label>
-        </nav>
-        <!-- NavBar Section Ends Here -->
-    
-        <!-- Center of the Page Image -->
-        <div class="center-image">
-            <img src="rag.jpg" alt="Your Image">
+        <div class="logo">NeotricAI <b>DataViz. Community</b></div>
+        <ul class="links">
+            <li><a href="https://nithish-yadav-31.github.io/NeotricAI-DataViz-Society/index.html">Home</a></li>
+            <li><a href="https://nithish-yadav-31.github.io/NeotricAI-DataViz-Society/About/index.html">About</a></li>
+            <li><a href="#Events">Events</a></li>
+            <li><a href="https://www.ritrjpm.ac.in/departments/ai-and-ds/ai-ds-about-the-department.php">Department</a></li>
+            <li><a href="https://nithish-yadav-31.github.io/NeotricAI-DataViz-Society/Technologies/index.html">Technologies</a></li>
+            <li><a href="https://nithish-yadav-31.github.io/NeotricAI-DataViz-Society/ContactUs/index.html">ContactUs</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    <!-- NavBar Section Ends Here -->
+
+    <!-- Welcome Message -->
+    <div class="welcome-message">
+        <p>Welcome! Register for "DoRAG!" now</p>
+    </div>
+
+    <!-- Center of the Page Image -->
+    <div class="center-image">
+        <img src="rag.jpg" alt="Your Image">
+    </div>
+
+    <!-- Description -->
+    <div class="content">
+        <h2>DoRAG: The Retrieval Augmented Generation Challenge</h2>
+        <p>Calling all AI enthusiasts!</p>
+        <p>Are you ready to push the boundaries of Retrieval Augmented Generation (RAG) models? DoRAG is your chance to showcase your skills and build a state-of-the-art RAG model within a thrilling 6-hour time limit (5 PM to 11 PM).</p>
+        <br>
+        <h3>What is DoRAG?</h3>
+        <p>DoRAG is a fast-paced competition where participants will race against the clock to develop and train a RAG model. You'll be provided with a rich dataset and access to powerful computing resources. Your task is to build the most effective RAG model within the timeframe, focusing on:</p>
+        <ul>
+            <li><strong>Accuracy:</strong> How well does your model answer questions or complete tasks using retrieved information?</li>
+            <li><strong>Retrieval Relevance:</strong> Do the retrieved documents accurately support the generated response?</li>
+            <li><strong>Efficiency:</strong> How efficiently can your model retrieve relevant information?</li>
+        </ul>
+        <br>
+        <h3>What do you need?</h3>
+        <ul>
+            <li>A team of passionate AI enthusiasts (2 - 3/team)</li>
+            <li>A thirst for competition and innovation</li>
+        </ul>
+        <br>
+        <h3>What will you win?</h3>
+        <ul>
+            <li>Bragging rights as the DoRAG champion!</li>
+            <li>Exciting prizes (to be announced!)</li>
+        </ul>
+        <br>
+        <h3>Ready to DoRAG?</h3>
+        <p>Registration for DoRAG opens on 2024-05-20. Don't miss this opportunity to test your skills and contribute to the advancement of RAG technology.</p>
+        <br>
+        <h3>Rules:</h3>
+        <ul>
+            <li>Team Size (2 - 3)</li>
+            <li>All participants in a team should be from the same department, but can be from different year of study</li>
+            <li>Submission should be made as a link to GitHub Repo</li>
+            <li>Should only use Open-Source models to build RAG</li>
+            <li>Allowed to use ChatGPT / GEMINI</li>
+        </ul>
+        <br>
+        <h3>Evaluation Criteria:</h3>
+        <p><strong>Basic:</strong></p>
+        <ul>
+            <li>File and Code structure</li>
+            <li>Open-sourcability of project</li>
+            <li>UI Design scale and frontend features</li>
+        </ul>
+        <p><strong>Advanced:</strong></p>
+        <ul>
+            <li>Retrieval Relevance</li>
+            <li>RAG pipeline Novelty</li>
+            <li>Document types supported</li>
+        </ul>
+        <p>There will also be hidden criteria which will be shared only post submission.</p>
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="timeline">
+        <div class="timeline-card">
+            <time>2024-05-20</time>
+            <p>Event Registration Ends</p>
         </div>
-    
-        <!-- Description -->
-        <div class="description">
-            <p>This is your description text. You can add whatever you want here.</p>
+        <div class="timeline-card">
+            <time>2024-06-22</time>
+            <p>Introductory Session & Start of Learning Phase</p>
         </div>
-    
-        <!-- Timeline Section Starts Here -->
-        <section class="timeline">
-            <div class="timeline-cards">
-                <div class="timeline-card">
-                    <time>1934</time>
-                    Event description for 1934.
-                </div>
-                <div class="timeline-card">
-                    <time>1937</time>
-                    Event description for 1937.
-                </div>
-                <div class="timeline-card">
-                    <time>1940</time>
-                    Event description for 1940.
-                </div>
-                <div class="timeline-card">
-                    <time>1943</time>
-                    Event description for 1943.
-                </div>
-            </div>
-        </section>
-        <!-- Timeline Section Ends Here -->
-    
+        <div class="timeline-card">
+            <time>2024-06-26</time>
+            <p>End of Learning Phase</p>
+        </div>
+        <div class="timeline-card">
+            <time>2024-06-27</time>
+            <p>Event Kickoff</p>
+        </div>
+    </div>
+
         <!-- Google Form Embed -->
         <div class="google-form">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdMPNGiK1N4GQvk0zs_tyYn0MeUOnVVJCT6L2J9KPnAtqsENg/viewform?embedded=true" width="800" height="3503" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>

@@ -194,3 +194,98 @@ time {
     align-items: center;
   }
 }
+
+/* Adjustments for 430x932 resolution */
+@media (max-width: 430px) {
+    .timeline ul {
+        display: none; /* Hide the timeline */
+    }
+
+    .timeline-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px;
+        padding: 20px;
+        background: #ffffff;
+        color: #2c7bfe;
+        border-radius: 8px;
+    }
+
+    .timeline-card time {
+        margin-bottom: 10px;
+    }
+
+    .timeline-card:nth-child(even) {
+        background: #f0f0f0;
+    }
+}
+
+/* Display timeline on higher resolutions */
+@media (min-width: 431px) {
+    .timeline ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline ul li {
+        width: 6px;
+        margin: 20px 0;
+        background: #fff;
+        position: relative;
+    }
+
+    .timeline ul li::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: inherit;
+        z-index: 1;
+    }
+
+    .timeline ul li div {
+        position: relative;
+        bottom: 0;
+        width: 400px;
+        padding: 15px;
+        background: #ffffff;
+        color: #2c7bfe;
+        border-radius: 8px;
+        text-align: left;
+    }
+
+    .timeline ul li div::before {
+        content: "";
+        position: absolute;
+        bottom: 7px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+
+    .timeline ul li:nth-child(odd) div {
+        left: 45px;
+    }
+
+    .timeline ul li:nth-child(odd) div::before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #fff transparent transparent;
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: -439px;
+    }
+
+    .timeline ul li:nth-child(even) div::before {
+        right: -15px;
+        border-width: 8px 0 8px 16px;
+        border-color: transparent transparent transparent #fff;
+    }
+}
